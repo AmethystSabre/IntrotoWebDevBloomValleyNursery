@@ -1,4 +1,36 @@
 html {
   height: 100%;
   width: 100%;
+  color: #00231C;
+  background-color: #F7F7F7;
+}
+
+header{
+  background-color: #96BAA0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Head-top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#logo{
+  width: 150px;
+  margin-right: auto;
+}
+
+h1#name{
+  font-size: 3.6rem;
+  text-align: left;
+  flex: 1;
+}
+
+#navlinks{
+  
 }

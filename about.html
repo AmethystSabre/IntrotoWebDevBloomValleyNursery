@@ -6,32 +6,50 @@
   <meta name="viewport" content="width=device-width">
   <title>Bloom Valley Nursery - Home</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/15a855253a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" width="25%" height="auto">
-    <h1>Bloom Valley Nursery</h1>
-    <div id="navlinks">
+    <div id=Head-top>
+      <a href="index.html">
+        <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" id="logo">
+      </a>
+      <h1 id="name">Bloom<br>Valley<br>Nursery</h1>
+    </div>
       <nav>
-        <ul>
+        <ul class="navlinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="customer.html">Customer</a></li>
         </ul>
+        <button class="navbutton"><i class="fa-solid fa-bars"></i>
+          <ul class="navlinks-mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="customer.html">Customer</a></li>
+          </ul>
+        </button>
+        
       </nav>
-    </div>
   </header>
 
   <main>
-    <div id="about">
-      <h3>About Us</h3>
-      <p>Paragraph about the business</p>
+    <div class="about">
+      <h2>About Us</h2>
+      <p>Culpa Lorem elit Lorem eiusmod elit in. Eu quis culpa elit id nulla cupidatat laborum mollit quis dolor fugiat sunt. Minim ea ex deserunt laborum labore. Cupidatat labore adipisicing excepteur ex quis nulla adipisicing laboris ullamco sunt velit proident incididunt occaecat.
+
+In sint do amet magna reprehenderit sit voluptate fugiat nulla ipsum cillum ipsum aute. Cillum anim pariatur anim dolor eiusmod. Consequat amet sit cupidatat consequat cupidatat nostrud labore excepteur sint ut adipisicing. Laborum ullamco proident aliqua dolor dolore deserunt id pariatur tempor. Ea excepteur quis magna excepteur adipisicing officia sunt consectetur deserunt consectetur exercitation consequat aliqua reprehenderit. Incididunt eiusmod sint consectetur in.
+
+Culpa excepteur elit ut ex labore sunt laborum incididunt quis commodo ut enim. Velit duis laborum velit sint do incididunt. Veniam quis magna mollit id commodo nostrud sit in pariatur amet deserunt. Cillum non nisi mollit voluptate quis culpa ad excepteur. Exercitation elit laboris esse do Lorem sunt est laborum et aute exercitation id labore reprehenderit. Sint amet incididunt eu sint incididunt tempor ea consectetur sint id. Mollit proident velit sint nostrud deserunt.
+
+Id labore minim cupidatat nostrud aliqua dolore enim aliqua fugiat aliqua consectetur laboris cillum dolore. Minim et consectetur dolore irure laboris ullamco nostrud eu consequat qui adipisicing consectetur ea amet. Reprehenderit voluptate proident nostrud reprehenderit ullamco. Laborum pariatur ut occaecat aliqua mollit do aliqua enim est duis incididunt et. Pariatur eu sint irure ipsum tempor ipsum in cupidatat. Nulla quis proident nisi est adipisicing dolore id.</p>
     </div>
-    <div id="Hours">
-      <h3>Business Hours</h3>
-      <table>
+    <div class="hours">
+      <h2>Business Hours</h2>
+      <table class="hours-table">
         <tr>
           <th>Monday-Friday</th>
           <th>Saturday-Sunday</th>
@@ -42,46 +60,52 @@
         </tr>
       </table>
     </div>
-    <div id="contact">
-      <h3>Contact Us</h3>
-      <h4>Name:</h4>
-      <input type="text" placeholder="Enter your name">
-      <h4>Email:</h4>
-      <input type="email" placeholder="enter your email">
-      <h4>Phone Number"</h4>
-      <input type="tel" placeholder="enter your phone number">
-      <input type="checkbox" >
-      <h4>Custom Order</h4>
-      <h4>Feedback/Order Information</h4>
-      <textarea placeholder="Enter your Feedback/Order Information">
-      </textarea>
-      <button>Submit</button>
-      <button>Clear</button>
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <div class="contact-info">
+          <h3>Name:</h3>
+          <input type="text" placeholder="Enter your name">
+          <h3>Email:</h3>
+          <input type="email" placeholder="enter your email">
+          <h3>Phone Number:</h3>
+          <input type="tel" placeholder="enter your phone number">
+          <div class="custom-order">
+            <input type="checkbox" >
+            <h3>Custom Order</h3>
+          </div>
+        </div>
+        <div class="feedback">
+          <h3>Feedback/Order Information</h3>
+          <textarea placeholder="Enter your Feedback/Order Information">
+          </textarea>
+          <div class="feedback-buttons">
+            <button>Submit</button>
+            <button>Clear</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer>
-    <div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="customer.html">Customer</a></li>
-        </ul>
-      </nav>
+    <div class="footer-links">
+          <div><a href="index.html">Home</a></div>
+          <div><a href="gallery.html">Gallery</a></div>
+          <div><a href="about.html">About</a></div>
+          <div><a href="customer.html">Customer</a></div>
     </div>
-
-    <p>Sign up for our newsletter</p>
-    <input type="email" placeholder="Enter your email" />
-    <button type="submit">submit</button>
-    <nav>
-      <ul>
-        <li><a href="facebook">facebook</a></li>
-        <li><a href="twitter">twitter</a></li>
-        <li><a href="instagram">instagram</a></li>
-        <li><a href="youtube">youtube</a></li>
-      </ul>
+    <div class="newsletter">
+      <h2>Sign up for our newsletter</h2>
+      <input type="email" placeholder="Enter your email" id="subscribe" required>
+      <button id="submit">submit</button>
+    </div>
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
   </footer>
 </body>
 

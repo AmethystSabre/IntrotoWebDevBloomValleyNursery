@@ -6,22 +6,34 @@
   <meta name="viewport" content="width=device-width">
   <title>Bloom Valley Nursery - Home</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/15a855253a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" width="25%" height="auto">
-    <h1>Bloom Valley Nursery</h1>
-    <div id="navlinks">
+    <div id=Head-top>
+      <a href="index.html">
+        <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" id="logo">
+      </a>
+      <h1 id="name">Bloom<br>Valley<br>Nursery</h1>
+    </div>
       <nav>
-        <ul>
+        <ul class="navlinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="customer.html">Customer</a></li>
         </ul>
+        <button class="navbutton"><i class="fa-solid fa-bars"></i>
+          <ul class="navlinks-mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="customer.html">Customer</a></li>
+          </ul>
+        </button>
+        
       </nav>
-    </div>
   </header>
 
   <main>
@@ -31,84 +43,80 @@
     </div>
     <div id="products">
       <div class="product">
-        <img src="" alt="product 1">
-        <h4>Product 1</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_AloePlant.png" alt="Aloe Plant">
+        <h3>Aloe Plant</h3>
+        <p>Duis dolor consequat proident est qui ullamco non.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 2">
-        <h4>Product 2</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_AppleTree.png" alt="Apple Tree">
+        <h3>Apple Tree</h3>
+        <p>Nulla fugiat aliqua exercitation tempor eiusmod fugiat adipisicing cillum id enim.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 3">
-        <h4>Product 3</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_BirchTree.png" alt="Birch Tree">
+        <h3>Birch Tree</h3>
+        <p>Duis id quis culpa eu Lorem anim ea eu laborum irure.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 4">
-        <h4>Product 4</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_BirdHouse.png" alt="Bird House">
+        <h3>Bird House</h3>
+        <p>Esse ex nostrud laboris reprehenderit cillum ea.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 5">
-        <h4>Product 5</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_MapleTree.png" alt="Maple Tree">
+        <h3>Maple Tree</h3>
+        <p>Ex proident cupidatat sunt sit magna id aute occaecat non exercitation pariatur nostrud.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 6">
-        <h4>Product 6</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_PottingSoil.png" alt="Potting Soil">
+        <h3>Potting Soil</h3>
+        <p>Duis aliquip excepteur ut excepteur nulla ullamco.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 7">
-        <h4>Product 7</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_SpiderPlant.png" alt="Spider Plant">
+        <h3>Spider Plant</h3>
+        <p>Ut officia eu duis qui cillum consequat aliquip deserunt proident ut commodo.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 8">
-        <h4>Product 8</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_StringofPearls.png" alt="String of Pearls">
+        <h3>String of Pearls</h3>
+        <p>Consequat sint laborum magna deserunt.</p>
         <button>Add To Cart</button>
       </div>
       <div class="product">
-        <img src="" alt="product 9">
-        <h4>Product 9</h4>
-        <p>Description</p>
+        <img src="pics/Client Pics/Client1_WateringCan.png" alt="Watering Can">
+        <h3>Watering Can</h3>
+        <p>Incididunt velit nostrud aute deserunt quis pariatur enim minim ullamco ullamco cillum dolore laborum.</p>
         <button>Add To Cart</button>
       </div>
     </div>
   </main>
 
   <footer>
-    <div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="customer.html">Customer</a></li>
-        </ul>
-      </nav>
+    <div class="footer-links">
+          <div><a href="index.html">Home</a></div>
+          <div><a href="gallery.html">Gallery</a></div>
+          <div><a href="about.html">About</a></div>
+          <div><a href="customer.html">Customer</a></div>
     </div>
-
-    <p>Sign up for our newsletter</p>
-    <input type="email" placeholder="Enter your email" />
-    <button type="submit">submit</button>
-    <nav>
-      <ul>
-        <li><a href="facebook">facebook</a></li>
-        <li><a href="twitter">twitter</a></li>
-        <li><a href="instagram">instagram</a></li>
-        <li><a href="youtube">youtube</a></li>
-      </ul>
+    <div class="newsletter">
+      <h2>Sign up for our newsletter</h2>
+      <input type="email" placeholder="Enter your email" id="subscribe" required>
+      <button id="submit">submit</button>
+    </div>
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
   </footer>
 </body>
 

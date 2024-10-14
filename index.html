@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width">
   <title>Bloom Valley Nursery - Home</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/15a855253a.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
   <header>
     <div id=Head-top>
-      <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" id="logo">
-      <h1 id="name">Bloom Valley Nursery</h1>
+      <a href="index.html">
+        <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" id="logo">
+      </a>
+      <h1 id="name">Bloom<br>Valley<br>Nursery</h1>
     </div>
-    <div id="navlinks">
       <nav>
         <ul class="navlinks">
           <li><a href="index.html">Home</a></li>
@@ -22,7 +25,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="customer.html">Customer</a></li>
         </ul>
-        <button id="navbutton">
+        <button class="navbutton"><i class="fa-solid fa-bars"></i>
           <ul class="navlinks-mobile">
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
@@ -32,84 +35,83 @@
         </button>
         
       </nav>
-    </div>
   </header>
   
   <main>
-    <div id="promos">
+    <div class="promo-box">
       <div class="promo">
-        <h4>Promo 1</h4>
+        <h3>Ad eu labore culpa duis.</h3>
       </div>
       <div class="promo">
-        <h4>Promo 2</h4>
+        <h3>Do voluptate Lorem labore qui nostrud aliqua eu sit aute nulla.</h3>
       </div>
       <div class="promo">
-        <h4>Promo 3</h4>
+        <h3>Ea aliquip ipsum dolore consequat fugiat non consequat sit.</h3>
       </div>
       <div class="promo">
-        <h4>Promo 4</h4>
+        <h3>Quis officia et in sint sit elit amet voluptate est cupidatat aute occaecat irure irure.</h3>
       </div>
       <div class="promo">
-        <h4>Promo 5</h4>
+        <h3>Nisi ipsum sit velit ut duis est voluptate fugiat ad.</h3>
       </div>
     </div>
-    <div id="highlights">
-      <div class="slideshow-container">
-        
+    <div class="highlights">
+      <div class="photos">
+        <img src="pics/Client Pics/Client1_AppleTree.png" alt=" Apple Trees">
+        <img src="pics/Client Pics/Client1_BirchTree.png" alt="Birch Trees">
+        <img src="pics/Client Pics/Client1_MapleTree.png" alt="Maple Trees">
       </div>
       <button id="shopnow">Shop Now</button>
     </div>
     <div id="perks">
-      <h3>Shopping Perks</h3>
-      <div class="perk">
-        <h4>Perk 1</h4>
-      </div>
-      <div class="perk">
-        <h4>Perk 2</h4>
-      </div>
-      <div class="perk">
-        <h4>Perk 3</h4>
-      </div>
-    </div>
-    <div id="categories">
-      <h3>Shop By Category</h3>
-      <div class="category">
-        <h4>Category 1</h4>
-      </div>
-      <div class="category">
-        <h4>Category 2</h4>
-      </div>
-      <div class="category">
-        <h4>Category 3</h4>
-      </div>
-      <div class="category">
-        <h4>Category 4</h4>
+      <h2>Shopping Perks</h2>
+      <div class="perk-box">
+        <div class="perk">
+          <h3>Labore irure enim nostrud et eiusmod eiusmod id proident esse laborum.</h3>
+        </div>
+        <div class="perk">
+          <h3>Excepteur ullamco aute sunt ut ea anim veniam sint.</h3>
+        </div>
+        <div class="perk">
+          <h3>Cupidatat aliqua cupidatat veniam sit enim non nostrud tempor nostrud elit.</h3>
+        </div>
       </div>
     </div>
+    <section class="category-section">
+      <h2>Shop By Category</h2>
+      <div class="categories">
+        <table class="column">
+          <tr>
+            <td>Category 1</td>
+            <td>Category 2</td>
+          </tr>
+          <tr>
+            <td>Category 3</td>
+            <td>Category 4</td>
+          </tr>
+          </table>
+      </div>
+    </section>
   </main>
     
   <footer>
-    <div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="customer.html">Customer</a></li>
-        </ul>
-      </nav>
+    <div class="footer-links">
+          <div><a href="index.html">Home</a></div>
+          <div><a href="gallery.html">Gallery</a></div>
+          <div><a href="about.html">About</a></div>
+          <div><a href="customer.html">Customer</a></div>
     </div>
-  
-    <p>Sign up for our newsletter</p>
-    <input type="email" placeholder="Enter your email" />
-    <button type="submit">submit</button>
-    <nav>
-      <ul>
-        <li><a href="facebook">facebook</a></li>
-        <li><a href="twitter">twitter</a></li>
-        <li><a href="instagram">instagram</a></li>
-        <li><a href="youtube">youtube</a></li>
-      </ul>
+    <div class="newsletter">
+      <h2>Sign up for our newsletter</h2>
+      <input type="email" placeholder="Enter your email" id="subscribe" required>
+      <button id="submit">submit</button>
+    </div>
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
   </footer>
 </body>
 

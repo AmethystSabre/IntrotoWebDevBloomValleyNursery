@@ -364,7 +364,6 @@ textarea {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  
   gap: 30px;
   padding: 20px;
 }
@@ -463,7 +462,6 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #00231C;
 }
 
 .custom-order {
@@ -476,7 +474,6 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #00231C;
   textarea {
     width: 75%;
     height: 200px;
@@ -489,6 +486,88 @@ textarea {
   justify-content: space-evenly;
   width: 70%;
   
+}
+
+/*====================Customer====================*/
+#spotlight {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 22px;
+  align-items: center;
+  background-color: #96BAA0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  H3 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+}
+
+.testimony {
+  background-color: #F7F7F7;
+  text-align: center;
+  padding: 20px 0;
+  border: 3px solid #F0C06D;
+  border-radius: 15px;
+  height: 350px;
+  img {
+    width: 50%;
+  }
+}
+
+#community {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #96BAA0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 22px;
+}
+
+.community {
+  background-color: #F7F7F7;
+  text-align: center;
+  padding: 20px 0;
+  border: 3px solid #F0C06D;
+  border-radius: 15px;
+  width: 90%;
+  margin-bottom: 10px;
+  h3 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+    text-align: left;
+    width: 95%;
+    margin-left: 15px;
+  }
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #96BAA0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 22px;
+  h3 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+    text-align: left;
+    width: 90%;
+  }
 }
 
 @media all and (max-width:800px) {
@@ -521,7 +600,30 @@ textarea {
     position: static;
   }
 
+  #gallery button {
+    width: 25%;
+  }
+
+  #products {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hours-table {
+    width: 75%;
+  }
+
   .contact-box {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .contact-info, .feedback {
+    width: 100%;
+  }
+
+  #spotlight {
+    display: flex;
     flex-direction: column;
   }
 }

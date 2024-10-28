@@ -250,8 +250,8 @@ textarea {
 }
 
 .shopbutton {
- display: flex;
- 
+  display: flex;
+
 }
 
 .photos {
@@ -393,9 +393,11 @@ textarea {
   text-align: center;
   margin-bottom: 20px;
   padding: 22px;
+
   h2 {
     font-size: 2.4rem;
   }
+
   p {
     text-align: left;
     font-size: 1.6rem;
@@ -411,14 +413,16 @@ textarea {
   text-align: center;
   margin-bottom: 20px;
   padding: 22px;
+
   h2 {
     font-size: 2.4rem;
   }
+
   font-size: 1.6rem;
 }
 
 .hours-table {
- 
+
   width: calc(50% - 10px);
   margin: 5px auto;
   background-color: #F7F7F7;
@@ -428,7 +432,8 @@ textarea {
   text-align: center;
   font-size: 1.6rem;
 
-  th, td {
+  th,
+  td {
     width: 50%;
   }
 }
@@ -442,6 +447,7 @@ textarea {
   text-align: center;
   margin-bottom: 20px;
   padding: 22px;
+
   h2 {
     font-size: 2.4rem;
   }
@@ -452,6 +458,7 @@ textarea {
   flex-direction: row;
   justify-content: center;
   width: 75%;
+
   h3 {
     font-size: 1.6rem;
   }
@@ -474,6 +481,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   textarea {
     width: 75%;
     height: 200px;
@@ -485,7 +493,7 @@ textarea {
   flex-direction: row;
   justify-content: space-evenly;
   width: 70%;
-  
+
 }
 
 /*====================Customer====================*/
@@ -500,9 +508,11 @@ textarea {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+
   H3 {
     font-size: 1.6rem;
   }
+
   p {
     font-size: 1.4rem;
     padding: 10px;
@@ -516,6 +526,7 @@ textarea {
   border: 3px solid #F0C06D;
   border-radius: 15px;
   height: 350px;
+
   img {
     width: 50%;
   }
@@ -540,9 +551,11 @@ textarea {
   border-radius: 15px;
   width: 90%;
   margin-bottom: 10px;
+
   h3 {
     font-size: 2.4rem;
   }
+
   p {
     font-size: 1.6rem;
     text-align: left;
@@ -560,9 +573,11 @@ textarea {
   text-align: center;
   margin-bottom: 20px;
   padding: 22px;
+
   h3 {
     font-size: 2.4rem;
   }
+
   p {
     font-size: 1.6rem;
     text-align: left;
@@ -589,7 +604,7 @@ textarea {
     display: flex;
     position: static;
     flex-direction: row;
-    
+
   }
 
   .footer-links div {
@@ -618,7 +633,9 @@ textarea {
     align-items: center;
     width: 100%;
   }
-  .contact-info, .feedback {
+
+  .contact-info,
+  .feedback {
     width: 100%;
   }
 

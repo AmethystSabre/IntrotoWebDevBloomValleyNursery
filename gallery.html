@@ -39,62 +39,71 @@
   <main>
     <div id="gallery">
       <h2>Gallery</h2>
-      <button id="cart">View Cart</button>
+      <button id="view-cart">View Cart</button>
+      <div id="cart" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>My Cart</h2>
+          <div id="cart-container"></div>
+          <button id="clear-cart">Clear Cart</button>
+          <button id="process-order">Process Order</button>
+        </div>
+      </div>
     </div>
     <div id="products">
       <div class="product">
         <img src="pics/Client Pics/Client1_AloePlant.png" alt="Aloe Plant">
         <h3>Aloe Plant</h3>
         <p>Duis dolor consequat proident est qui ullamco non.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="1" data-item-name="aloe">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_AppleTree.png" alt="Apple Tree">
         <h3>Apple Tree</h3>
         <p>Nulla fugiat aliqua exercitation tempor eiusmod fugiat adipisicing cillum id enim.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="2" data-item-name="apple">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_BirchTree.png" alt="Birch Tree">
         <h3>Birch Tree</h3>
         <p>Duis id quis culpa eu Lorem anim ea eu laborum irure.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="3" data-item-name="birch">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_BirdHouse.png" alt="Bird House">
         <h3>Bird House</h3>
         <p>Esse ex nostrud laboris reprehenderit cillum ea.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="4" data-item-name="bird">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_MapleTree.png" alt="Maple Tree">
         <h3>Maple Tree</h3>
         <p>Ex proident cupidatat sunt sit magna id aute occaecat non exercitation pariatur nostrud.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="5" data-item-name="maple">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_PottingSoil.png" alt="Potting Soil">
         <h3>Potting Soil</h3>
         <p>Duis aliquip excepteur ut excepteur nulla ullamco.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="6" data-item-name="soil">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_SpiderPlant.png" alt="Spider Plant">
         <h3>Spider Plant</h3>
         <p>Ut officia eu duis qui cillum consequat aliquip deserunt proident ut commodo.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="7" data-item-name="spider">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_StringofPearls.png" alt="String of Pearls">
         <h3>String of Pearls</h3>
         <p>Consequat sint laborum magna deserunt.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="8" data-item-name="pearls">Add To Cart</button>
       </div>
       <div class="product">
         <img src="pics/Client Pics/Client1_WateringCan.png" alt="Watering Can">
         <h3>Watering Can</h3>
         <p>Incididunt velit nostrud aute deserunt quis pariatur enim minim ullamco ullamco cillum dolore laborum.</p>
-        <button id="add-to-cart">Add To Cart</button>
+        <button class="add-to-cart" data-item-id="9" data-item-name="can">Add To Cart</button>
       </div>
     </div>
   </main>
@@ -118,7 +127,7 @@
       <a href="#"><i class="fa-brands fa-youtube"></i></a>
     </div>
   </footer>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js" defer></script>
 </body>
 
 </html>

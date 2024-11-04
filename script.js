@@ -6,9 +6,11 @@ window.onload = function() {
   let subscribe = document.getElementById("submit");
   subscribe.addEventListener("click", subscribetoNewsletter);
 
-  var modal = document.getElementById("cart");
-  var viewCart = document.getElementById("view-cart");
-  var span = document.getElementsByClassName("close")[0];
+  /*====================Gallery====================*/
+
+  const modal = document.getElementById("cart");
+  const viewCart = document.getElementById("view-cart");
+  const span = document.getElementsByClassName("close")[0];
 
   console.log("Modal:", modal);
   console.log("View Cart Button:", viewCart);
@@ -47,16 +49,38 @@ window.onload = function() {
     updateCartDisplay();
   }
 
+  const clearCartButton = document.getElementById("clear-cart");
+  clearCartButton.onclick = clearCart;
+
   function clearCart() {
-    cart = [];
-    localStorage.removeItem('cart');
-    console.log("Cart Cleared")
-    alert("Cart Cleared")
-    updateCartDisplay();
+    if (cart.length === 0) {
+      alert("No items to clear.");
+    } else {
+      cart = [];
+      localStorage.removeItem('cart');
+      console.log("Cart Cleared")
+      alert("Cart Cleared")
+      updateCartDisplay();
+    }
+  }
+
+  const processOrderButton = document.getElementById("process-order");
+  processOrderButton.onclick = processOrder;
+
+  function processOrder() {
+    if (cart.length === 0) {
+      alert("Cart is empty.");
+    } else {
+      cart = [];
+      localStorage.removeItem('cart');
+      console.log("Thank you for your order.");
+      alert("Order Processed");
+      updateCartDisplay();
+    }
   }
 
   function updateCartDisplay() {
-    const cartContainer = document.getElementById('cart');
+    const cartContainer = document.getElementById('cart-container');
     cartContainer.innerHTML = '';
 
     cart.forEach(item => {
@@ -68,8 +92,6 @@ window.onload = function() {
 
   updateCartDisplay();
 
-
-
   document.querySelectorAll(".add-to-cart").forEach(buttontocart => {
     buttontocart.addEventListener("click", () => {
       const itemId = buttontocart.getAttribute("data-item-id");
@@ -80,3 +102,12 @@ window.onload = function() {
   });
 
 };
+
+/*====================About Us====================*/
+
+const formSubmit = document.getElementById("form-submit");
+formSubmit.onclick = submitForm;
+
+function submitForm() {
+  alert("Thank you for your message.")
+}

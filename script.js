@@ -6,6 +6,11 @@ window.onload = function() {
   let subscribe = document.getElementById("submit");
   subscribe.addEventListener("click", subscribetoNewsletter);
 
+  document.querySelector('.navbutton').addEventListener('click', function() {
+    const mobileMenu = document.querySelector('.navlinks-mobile');
+    mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
   /*====================Gallery====================*/
 
   const modal = document.getElementById("cart");
@@ -16,7 +21,7 @@ window.onload = function() {
   console.log("View Cart Button:", viewCart);
   console.log("Close Button:", span);
 
-  if (modal && viewCart && closeButton) {
+  if (modal && viewCart && close) {
     viewCart.onclick = function() {
       console.log("View Cart Button Clicked");
       modal.style.display = "block";
@@ -108,10 +113,7 @@ window.onload = function() {
 
   /*====================About Us====================*/
 
-  document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded");
-
-    const nameInput = document.getElementById("name");
+    const nameInput = document.getElementById("form-name");
     const emailInput = document.getElementById("email");
     const phoneInput = document.getElementById("phone");
     const customOrderInput = document.getElementById("customorder");
@@ -123,26 +125,33 @@ window.onload = function() {
 
     function saveFormData() {
       const formData = {
-        name: nameInput.value,
-        email: emailInput.value,
-        phone: phoneInput.value,
+        name: (nameInput.value || "").trim(),
+        email: emailInput.value.trim(),
+        phone: phoneInput.value.trim(),
         customOrder: customOrderInput.checked,
-        feedback: feedbackInput.value
+        feedback: feedbackInput.value.trim()
       };
 
+      console.log("Saving form Data:", formData);
+
+      try {
       localStorage.setItem(`contactFormData`, JSON.stringify(formData));
-      alert("Thank you for your message.")
+      console.log("Data saved to localStorage");
+      alert("Thank you for your message.");
+    } catch (error) {
+      console.error("Error saving to localStorage", error);
+    }
     }
 
     function loadFormData() {
       const savedData = JSON.parse(localStorage.getItem("contactFormData"));
 
       if (savedData) {
-        nameInput.value = savedData.name;
-        emailInput.value = savedData.email;
-        phoneInput.value = savedData.phone;
-        customOrderInput.checked = savedData.customOrder;
-        feedbackInput.value = savedData.feedback;
+        nameInput.value = savedData.name || "";
+        emailInput.value = savedData.email || "";
+        phoneInput.value = savedData.phone || "";
+        customOrderInput.checked = savedData.customOrder || "";
+        feedbackInput.value = savedData.feedback || "";
       }
     }
 
@@ -153,14 +162,22 @@ window.onload = function() {
       customOrderInput.checked = false;
       feedbackInput.value = "";
 
+      console.log("Clearing localStorage data");
       localStorage.removeItem("contactFormData");
       alert("Form data has been cleared.");
     }
 
+    if (submitButton && clearButton) {
     submitButton.addEventListener("click", function(event) {
       event.preventDefault();
       console.log("Submit button clicked");
       saveFormData();
+
+      nameInput.value = "";
+      emailInput.value = "";
+      phoneInput.value = "";
+      customOrderInput.checked = false;
+      feedbackInput.value = "";
     });
 
     clearButton.addEventListener("click", function(event) {
@@ -168,5 +185,7 @@ window.onload = function() {
       console.log("Clear button clicked");
       clearFormData();
     });
-  });
+    } else {
+      console.warn("submit or Clear button not found");
+    }
 };

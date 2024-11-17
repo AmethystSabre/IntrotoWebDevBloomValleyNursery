@@ -13,33 +13,33 @@
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <div id=Head-top>
       <a href="index.html">
         <img src="pics/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" id="logo">
       </a>
       <h1 id="name">Bloom<br>Valley<br>Nursery</h1>
     </div>
-    <nav>
+    <nav aria-label="Main Navigation">
       <ul class="navlinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="community.html">Community</a></li>
+        <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
+        <li><a href="gallery.html" aria-label="Go to Gallery page">Gallery</a></li>
+        <li><a href="about.html" aria-label="Go to About Us page">About</a></li>
+        <li><a href="community.html" aria-label="Go to Community page">Community</a></li>
       </ul>
-      <button class="navbutton"><i class="fa-solid fa-bars"></i>
-        <ul class="navlinks-mobile">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="community.html">Community</a></li>
+      <button class="navbutton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><i
+          class="fa-solid fa-bars"></i>
+        <ul id="mobile-menu" class="navlinks-mobile">
+          <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
+          <li><a href="gallery.html" aria-label="Go to Gallery page">Gallery</a></li>
+          <li><a href="about.html" aria-label="Go to About Us page">About</a></li>
+          <li><a href="community.html" aria-label="Go to Community page">Community</a></li>
         </ul>
       </button>
-
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <div class="promo-box">
       <div class="promo">
         <h3>Ad eu labore culpa duis.</h3>
@@ -59,11 +59,11 @@
     </div>
     <div class="highlights">
       <div class="photos">
-        <img src="pics/Client Pics/Client1_AppleTree.png" alt=" Apple Trees">
+        <img src="pics/Client Pics/Client1_AppleTree.png" alt="Apple Trees">
         <img src="pics/Client Pics/Client1_BirchTree.png" alt="Birch Trees">
         <img src="pics/Client Pics/Client1_MapleTree.png" alt="Maple Trees">
       </div>
-      <button id="shopnow">Shop Now</button>
+      <button id="shopnow"><a href="gallery.html" aria-label="Go to Gallery page">Shop Now</a></button>
     </div>
     <div id="perks">
       <h2>Shopping Perks</h2>
@@ -96,17 +96,17 @@
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-links">
-      <div><a href="index.html">Home</a></div>
-      <div><a href="gallery.html">Gallery</a></div>
-      <div><a href="about.html">About</a></div>
-      <div><a href="community.html">Community</a></div>
+      <div><a href="index.html" aria-label="Go to Home page">Home</a></div>
+      <div><a href="gallery.html" aria-label="Go to Gallery page">Gallery</a></div>
+      <div><a href="about.html" aria-label="Go to About Us page">About</a></div>
+      <div><a href="community.html" aria-label="Go to Community page">Community</a></div>
     </div>
     <div class="newsletter">
       <h2>Sign up for our newsletter</h2>
       <input type="email" placeholder="Enter your email" id="subscribe" required>
-      <button id="submit">submit</button>
+      <button id="submit" aria-label="Subscribe to newsletter">submit</button>
     </div>
     <div class="social">
       <a href="#"><i class="fa-brands fa-facebook"></i></a>

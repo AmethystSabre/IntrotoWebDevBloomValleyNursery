@@ -6,7 +6,7 @@ html {
   height: 100%;
   width: 100%;
   color: #00231C;
-  background-color: #BDD4DA;
+  background-color: #F7F7F7;
   font-size: 62.4%;
 }
 
@@ -248,7 +248,7 @@ textarea {
 
 .promo {
   display: inline-block;
-  background-color: #F7F7F7;
+  background-color: #BDD4DA;
   padding: 10px;
   margin: 2px;
   border: 1px solid #F0C06D;
@@ -309,7 +309,7 @@ textarea {
 
 .perk {
   display: inline-block;
-  background-color: #F7F7F7;
+  background-color: #BDD4DA;
   padding: 10px;
   margin: 2px;
   border: 1px solid #F0C06D;
@@ -363,7 +363,7 @@ textarea {
 .column td {
   width: calc(50% - 10px);
   margin: 5px auto;
-  background-color: #F7F7F7;
+  background-color: #BDD4DA;
   padding: 20px;
   border: 1px solid #F0C06D;
   border-radius: 15px;
@@ -519,7 +519,7 @@ textarea {
 
   width: calc(50% - 10px);
   margin: 5px auto;
-  background-color: #F7F7F7;
+  background-color: #BDD4DA;
   padding: 20px;
   border: 1px solid #F0C06D;
   border-radius: 15px;
@@ -648,7 +648,7 @@ textarea {
 }
 
 .community {
-  background-color: #F7F7F7;
+  background-color: #BDD4DA;
   text-align: center;
   padding: 20px 0;
   border: 3px solid #F0C06D;

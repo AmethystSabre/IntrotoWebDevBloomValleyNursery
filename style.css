@@ -10,7 +10,8 @@ html {
   font-size: 62.4%;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -168,7 +169,7 @@ footer {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  
+
 }
 
 .newsletter h2 {
@@ -595,7 +596,7 @@ textarea {
 
 }
 
-/*====================Customer====================*/
+/*====================Community====================*/
 #spotlight {
   display: grid;
   grid-template-columns: auto auto auto;

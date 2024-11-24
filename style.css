@@ -156,7 +156,10 @@ footer {
 .footer-links {
   width: fit-content;
   position: absolute;
-  ;
+
+  div {
+    padding: 3px;
+  }
 }
 
 .footer-links a {
@@ -281,6 +284,7 @@ textarea {
 
 .shopnow {
   display: flex;
+
 }
 
 .photos {
@@ -294,17 +298,17 @@ textarea {
 }
 
 .photos img {
-  width: 100%;
+  max-width: 100%;
   padding: 10px;
 }
 
-.photos p {  
-    font-family: 'Calibri';
-    font-weight: normal;
-    font-size: 1.6rem;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
+.photos p {
+  font-family: 'Calibri';
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 /*====================Perks====================*/

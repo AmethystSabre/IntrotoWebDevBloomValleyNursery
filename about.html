@@ -24,7 +24,7 @@
       <ul class="navlinks">
         <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
         <li><a href="gallery.html" aria-label="Go to Gallery page">Gallery</a></li>
-        <li><a href="about.html" aria-label="Go to About Us page">About</a></li>
+        <li><div class="marker">You are currently on</div><a href="about.html" aria-label="Go to About Us page">About</a></li>
         <li><a href="community.html" aria-label="Go to Community page">Community</a></li>
       </ul>
       <button class="navbutton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><i
@@ -82,11 +82,11 @@
       <div class="contact-box">
         <div class="contact-info">
           <h3>Name:</h3>
-          <input type="text" placeholder="Enter your name" id="form-name">
+          <input type="text" placeholder="Enter your name" id="form-name" aria-required="true">
           <h3>Email:</h3>
-          <input type="email" placeholder="enter your email" id="email">
+          <input type="email" placeholder="enter your email" id="email" aria-required="true">
           <h3>Phone Number:</h3>
-          <input type="tel" placeholder="enter your phone number" id="phone">
+          <input type="tel" placeholder="enter your phone number" id="phone" aria-required="true">
           <div class="custom-order">
             <input type="checkbox" id="customorder">
             <h3>Custom Order</h3>
@@ -94,10 +94,10 @@
         </div>
         <div class="feedback">
           <h3>Feedback/Order Information</h3>
-          <textarea placeholder="Enter your Feedback/Order Information" id="feedback"></textarea>
+          <textarea placeholder="Enter your Feedback/Order Information" id="feedback" aria-required="true"></textarea>
           <div class="feedback-buttons">
-            <button type="button" id="form-submit">Submit</button>
-            <button type="button" id="form-clear">Clear</button>
+            <button type="button" id="form-submit" aria-label="Submit your feedback or order">Submit</button>
+            <button type="button" id="form-clear" aria-label="Clear the form">Clear</button>
           </div>
         </div>
       </div>
@@ -113,14 +113,14 @@
     </div>
     <div class="newsletter">
       <h2>Sign up for our newsletter</h2>
-      <input type="email" placeholder="Enter your email" id="subscribe" required>
+      <input type="email" placeholder="Enter your email" id="subscribe" aria-required="true" required>
       <button id="submit" aria-label="Subscribe to newsletter">submit</button>
     </div>
     <div class="social">
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" aria-label="Visit our Facebook page"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" aria-label="Visit our Twitter page"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="Visit our Instagram page"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Visit our Youtube page"><i class="fa-brands fa-youtube"></i></a>
     </div>
   </footer>
   <script type="text/javascript" src="script.js" defer></script>

@@ -79,8 +79,8 @@ window.onload = function() {
       } else {
         cart = [];
         sessionStorage.removeItem('cart');
-        console.log("Thank you for your order.");
-        alert("Order Processed");
+        console.log("Order Processed");
+        alert("Thank you for your order.");
         updateCartDisplay();
       }
     }

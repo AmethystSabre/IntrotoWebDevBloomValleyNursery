@@ -1,10 +1,28 @@
 window.onload = function() {
   console.log("JavaScript Loaded");
 
-  function subscribetoNewsletter() { alert("Thank you for subscribing."); }
+  function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+    return emailPattern.test(email);
+  }
 
-  let subscribe = document.getElementById("submit");
-  subscribe.addEventListener("click", subscribetoNewsletter);
+  function subscribeToNewsletter(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById("subscribe");
+    const email = emailInput.value.trim();
+
+    if (validateEmail(email)) {
+      alert("Thank you for subscribing.");
+      emailInput.value = "";
+    } else {
+      alert("Please fill out this field");
+      emailInput.focus();
+    }
+  }
+  document.getElementById("newsletter-form").addEventListener("submit", subscribeToNewsletter);
+
+
 
   document.querySelector('.navbutton').addEventListener('click', function() {
     const mobileMenu = document.querySelector('.navlinks-mobile');
@@ -112,62 +130,61 @@ window.onload = function() {
   }
 
   /*====================About Us====================*/
+  const nameInput = document.getElementById("form-name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const customOrderInput = document.getElementById("customorder");
+  const feedbackInput = document.getElementById("feedback");
+  const submitButton = document.getElementById("form-submit");
+  const clearButton = document.getElementById("form-clear");
 
-    const nameInput = document.getElementById("form-name");
-    const emailInput = document.getElementById("email");
-    const phoneInput = document.getElementById("phone");
-    const customOrderInput = document.getElementById("customorder");
-    const feedbackInput = document.getElementById("feedback");
-    const submitButton = document.getElementById("form-submit");
-    const clearButton = document.getElementById("form-clear");
+  loadFormData();
 
-    loadFormData();
+  function saveFormData() {
+    const formData = {
+      name: (nameInput.value || "").trim(),
+      email: emailInput.value.trim(),
+      phone: phoneInput.value.trim(),
+      customOrder: customOrderInput.checked,
+      feedback: feedbackInput.value.trim()
+    };
 
-    function saveFormData() {
-      const formData = {
-        name: (nameInput.value || "").trim(),
-        email: emailInput.value.trim(),
-        phone: phoneInput.value.trim(),
-        customOrder: customOrderInput.checked,
-        feedback: feedbackInput.value.trim()
-      };
+    console.log("Saving form Data:", formData);
 
-      console.log("Saving form Data:", formData);
-
-      try {
+    try {
       localStorage.setItem(`contactFormData`, JSON.stringify(formData));
       console.log("Data saved to localStorage");
       alert("Thank you for your message.");
     } catch (error) {
       console.error("Error saving to localStorage", error);
     }
+  }
+
+  function loadFormData() {
+    const savedData = JSON.parse(localStorage.getItem("contactFormData"));
+
+    if (savedData) {
+      nameInput.value = savedData.name || "";
+      emailInput.value = savedData.email || "";
+      phoneInput.value = savedData.phone || "";
+      customOrderInput.checked = savedData.customOrder || "";
+      feedbackInput.value = savedData.feedback || "";
     }
+  }
 
-    function loadFormData() {
-      const savedData = JSON.parse(localStorage.getItem("contactFormData"));
+  function clearFormData() {
+    nameInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    customOrderInput.checked = false;
+    feedbackInput.value = "";
 
-      if (savedData) {
-        nameInput.value = savedData.name || "";
-        emailInput.value = savedData.email || "";
-        phoneInput.value = savedData.phone || "";
-        customOrderInput.checked = savedData.customOrder || "";
-        feedbackInput.value = savedData.feedback || "";
-      }
-    }
+    console.log("Clearing localStorage data");
+    localStorage.removeItem("contactFormData");
+    alert("Form data has been cleared.");
+  }
 
-    function clearFormData() {
-      nameInput.value = "";
-      emailInput.value = "";
-      phoneInput.value = "";
-      customOrderInput.checked = false;
-      feedbackInput.value = "";
-
-      console.log("Clearing localStorage data");
-      localStorage.removeItem("contactFormData");
-      alert("Form data has been cleared.");
-    }
-
-    if (submitButton && clearButton) {
+  if (submitButton && clearButton) {
     submitButton.addEventListener("click", function(event) {
       event.preventDefault();
       console.log("Submit button clicked");
@@ -185,7 +202,7 @@ window.onload = function() {
       console.log("Clear button clicked");
       clearFormData();
     });
-    } else {
-      console.warn("submit or Clear button not found");
-    }
+  } else {
+    console.warn("submit or Clear button not found");
+  }
 };

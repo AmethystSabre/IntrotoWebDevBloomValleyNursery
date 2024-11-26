@@ -167,7 +167,7 @@ window.onload = function() {
       nameInput.value = savedData.name || "";
       emailInput.value = savedData.email || "";
       phoneInput.value = savedData.phone || "";
-      customOrderInput.checked = savedData.customOrder || "";
+      customOrderInput.checked = savedData.customOrder || false;
       feedbackInput.value = savedData.feedback || "";
     }
   }
@@ -184,17 +184,58 @@ window.onload = function() {
     alert("Form data has been cleared.");
   }
 
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+  const phonePattern = /^[0-9]{10}$/;
+
+  function validateInputs() {
+    if (nameInput.value.trim() === "") {
+      nameInput.setCustomValidity("please fill out this field.");
+      nameInput.reportValidity();
+      return false;
+    } else {
+      nameInput.setCustomValidity("");
+    }
+
+    if (!emailPattern.test(emailInput.value.trim())) {
+      emailInput.setCustomValidity("please fill out this field.");
+      emailInput.reportValidity();
+      return false;
+    } else {
+      emailInput.setCustomValidity("");
+    }
+
+    if (!phonePattern.test(phoneInput.value.trim())) {
+      phoneInput.setCustomValidity("please fill out this field.");
+      phoneInput.reportValidity();
+      return false;
+    } else {
+      phoneInput.setCustomValidity("");
+    }
+
+    if (feedbackInput.value.trim() === "") {
+      feedbackInput.setCustomValidity("please fill out this field.");
+      feedbackInput.reportValidity();
+      return false;
+    } else {
+      feedbackInput.setCustomValidity("");
+    }
+
+    return true
+  }
+
   if (submitButton && clearButton) {
     submitButton.addEventListener("click", function(event) {
       event.preventDefault();
       console.log("Submit button clicked");
-      saveFormData();
+      if (validateInputs()) {
+        saveFormData();
 
-      nameInput.value = "";
-      emailInput.value = "";
-      phoneInput.value = "";
-      customOrderInput.checked = false;
-      feedbackInput.value = "";
+        nameInput.value = "";
+        emailInput.value = "";
+        phoneInput.value = "";
+        customOrderInput.checked = false;
+        feedbackInput.value = "";
+      }
     });
 
     clearButton.addEventListener("click", function(event) {
